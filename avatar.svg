@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+	<!--
+		@file avatar.svg
+		@brief Waschbär-Avatar für das GitHub-Profil WaschbaerImHaus.
+		       Stilisierter Waschbär-Kopf, Flat-Design, dunkler Hintergrund.
+		@author Kurt Ingwer
+		@lastModified 2026-03-28
+	-->
+
+	<defs>
+		<!-- Hintergrund-Verlauf -->
+		<radialGradient id="bgGrad" cx="50%" cy="40%" r="65%">
+			<stop offset="0%"   stop-color="#1e2533"/>
+			<stop offset="100%" stop-color="#161b22"/>
+		</radialGradient>
+		<!-- Fell-Verlauf Kopf -->
+		<radialGradient id="furGrad" cx="50%" cy="40%" r="55%">
+			<stop offset="0%"   stop-color="#a0b0c4"/>
+			<stop offset="100%" stop-color="#6e7e92"/>
+		</radialGradient>
+		<!-- Fell-Verlauf Wangen -->
+		<radialGradient id="cheekGrad" cx="50%" cy="50%" r="50%">
+			<stop offset="0%"   stop-color="#9aaabe"/>
+			<stop offset="100%" stop-color="#6a7a8e"/>
+		</radialGradient>
+		<!-- Maul-Bereich Verlauf -->
+		<radialGradient id="muzzleGrad" cx="50%" cy="40%" r="60%">
+			<stop offset="0%"   stop-color="#e0d8c4"/>
+			<stop offset="100%" stop-color="#c8bfa8"/>
+		</radialGradient>
+		<!-- Innenohr Verlauf -->
+		<radialGradient id="earGrad" cx="50%" cy="50%" r="50%">
+			<stop offset="0%"   stop-color="#d4a0aa"/>
+			<stop offset="100%" stop-color="#b88090"/>
+		</radialGradient>
+		<!-- Iris Verlauf -->
+		<radialGradient id="irisGrad" cx="35%" cy="35%" r="60%">
+			<stop offset="0%"   stop-color="#4a6e98"/>
+			<stop offset="100%" stop-color="#253550"/>
+		</radialGradient>
+		<!-- Schatten-Filter -->
+		<filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+			<feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+		</filter>
+	</defs>
+
+	<!-- ════════════ HINTERGRUND ════════════ -->
+	<rect width="512" height="512" fill="url(#bgGrad)"/>
+
+	<!-- Subtile Kreisstruktur im Hintergrund -->
+	<circle cx="256" cy="256" r="230" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.04"/>
+	<circle cx="256" cy="256" r="200" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.03"/>
+
+	<!-- ════════════ KÖRPER-ANDEUTUNG ════════════ -->
+	<ellipse cx="256" cy="470" rx="110" ry="55" fill="#6a7a8e" opacity="0.7"/>
+
+	<!-- ════════════ OHREN ════════════ -->
+	<!-- Linkes Ohr (außen) -->
+	<path d="M 148 168 L 100 62 L 200 95 Z" fill="#607080" filter="url(#softShadow)"/>
+	<!-- Linkes Ohr (innen) -->
+	<path d="M 148 160 L 117 83 L 185 106 Z" fill="url(#earGrad)"/>
+
+	<!-- Rechtes Ohr (außen) -->
+	<path d="M 364 168 L 312 95 L 412 62 Z" fill="#607080" filter="url(#softShadow)"/>
+	<!-- Rechtes Ohr (innen) -->
+	<path d="M 364 160 L 327 106 L 395 83 Z" fill="url(#earGrad)"/>
+
+	<!-- ════════════ KOPF ════════════ -->
+	<!-- Hauptkopf-Ellipse -->
+	<ellipse cx="256" cy="275" rx="152" ry="148" fill="url(#furGrad)" filter="url(#softShadow)"/>
+
+	<!-- Wangenpusten (links) -->
+	<ellipse cx="148" cy="318" rx="58" ry="48" fill="url(#cheekGrad)"/>
+	<!-- Wangenpusten (rechts) -->
+	<ellipse cx="364" cy="318" rx="58" ry="48" fill="url(#cheekGrad)"/>
+
+	<!-- Stirnstreifen (dunkler Streifen von Stirn zur Nase) -->
+	<ellipse cx="256" cy="210" rx="30" ry="52" fill="#4e5e70" opacity="0.45"/>
+
+	<!-- ════════════ AUGENMASKE ════════════ -->
+	<!-- Die charakteristische schwarze Waschbär-Maske -->
+	<path d="
+		M 138 256
+		C 135 228, 158 202, 192 202
+		C 208 200, 222 204, 234 210
+		C 242 214, 250 216, 256 216
+		C 262 216, 270 214, 278 210
+		C 290 204, 304 200, 320 202
+		C 354 202, 377 228, 374 256
+		C 374 280, 360 300, 344 302
+		C 330 304, 318 294, 304 292
+		C 290 290, 274 286, 256 286
+		C 238 286, 222 290, 208 292
+		C 194 294, 182 304, 168 302
+		C 152 300, 138 280, 138 256 Z
+	" fill="#18202e"/>
+
+	<!-- Maske – weicher innerer Übergang für 3D-Effekt -->
+	<path d="
+		M 148 256
+		C 146 234, 164 214, 194 214
+		C 206 212, 218 216, 230 222
+		C 240 226, 250 228, 256 228
+		C 262 228, 272 226, 282 222
+		C 294 216, 306 212, 318 214
+		C 348 214, 366 234, 364 256
+		C 364 274, 352 290, 340 292
+		C 328 294, 316 286, 302 284
+		C 288 282, 273 278, 256 278
+		C 239 278, 224 282, 210 284
+		C 196 286, 184 294, 172 292
+		C 160 290, 148 274, 148 256 Z
+	" fill="#1e2838" opacity="0.6"/>
+
+	<!-- ════════════ AUGEN ════════════ -->
+	<!-- Auge links – Weiß -->
+	<ellipse cx="196" cy="254" rx="30" ry="28" fill="#deeaf5"/>
+	<!-- Auge rechts – Weiß -->
+	<ellipse cx="316" cy="254" rx="30" ry="28" fill="#deeaf5"/>
+
+	<!-- Iris links -->
+	<circle cx="196" cy="256" r="21" fill="url(#irisGrad)"/>
+	<!-- Iris rechts -->
+	<circle cx="316" cy="256" r="21" fill="url(#irisGrad)"/>
+
+	<!-- Pupille links -->
+	<circle cx="196" cy="257" r="13" fill="#0a0e17"/>
+	<!-- Pupille rechts -->
+	<circle cx="316" cy="257" r="13" fill="#0a0e17"/>
+
+	<!-- Glanzpunkt links (groß) -->
+	<ellipse cx="204" cy="248" rx="6" ry="5" fill="#ffffff" opacity="0.92"/>
+	<!-- Glanzpunkt links (klein) -->
+	<ellipse cx="188" cy="263" rx="3" ry="2.5" fill="#ffffff" opacity="0.38"/>
+
+	<!-- Glanzpunkt rechts (groß) -->
+	<ellipse cx="324" cy="248" rx="6" ry="5" fill="#ffffff" opacity="0.92"/>
+	<!-- Glanzpunkt rechts (klein) -->
+	<ellipse cx="308" cy="263" rx="3" ry="2.5" fill="#ffffff" opacity="0.38"/>
+
+	<!-- ════════════ MAUL-BEREICH ════════════ -->
+	<!-- Heller Maul-Bereich -->
+	<ellipse cx="256" cy="350" rx="82" ry="70" fill="url(#muzzleGrad)"/>
+	<!-- Innere Aufhellung -->
+	<ellipse cx="256" cy="355" rx="65" ry="54" fill="#ddd5be" opacity="0.6"/>
+
+	<!-- ════════════ NASE ════════════ -->
+	<path d="M 240 320 Q 256 312 272 320 Q 274 336 256 340 Q 238 336 240 320 Z" fill="#18202e"/>
+	<!-- Nasen-Highlight -->
+	<ellipse cx="248" cy="322" rx="5" ry="3.5" fill="#38404e" opacity="0.7"/>
+
+	<!-- ════════════ MUND ════════════ -->
+	<line x1="256" y1="340" x2="256" y2="352" stroke="#b0a890" stroke-width="2" stroke-linecap="round"/>
+	<!-- Lächeln links -->
+	<path d="M 256 352 Q 238 364 226 360" stroke="#a09880" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+	<!-- Lächeln rechts -->
+	<path d="M 256 352 Q 274 364 286 360" stroke="#a09880" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+	<!-- ════════════ SCHNURRHAAR-PUNKTE ════════════ -->
+	<circle cx="212" cy="342" r="3.2" fill="#5a6878"/>
+	<circle cx="207" cy="352" r="3.2" fill="#5a6878"/>
+	<circle cx="213" cy="362" r="3.2" fill="#5a6878"/>
+	<circle cx="300" cy="342" r="3.2" fill="#5a6878"/>
+	<circle cx="305" cy="352" r="3.2" fill="#5a6878"/>
+	<circle cx="299" cy="362" r="3.2" fill="#5a6878"/>
+
+	<!-- ════════════ SCHNURRHAARE ════════════ -->
+	<!-- Links -->
+	<line x1="212" y1="342" x2="148" y2="334" stroke="#8a96a8" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+	<line x1="207" y1="352" x2="145" y2="352" stroke="#8a96a8" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+	<line x1="213" y1="362" x2="150" y2="368" stroke="#8a96a8" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+	<!-- Rechts -->
+	<line x1="300" y1="342" x2="364" y2="334" stroke="#8a96a8" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+	<line x1="305" y1="352" x2="367" y2="352" stroke="#8a96a8" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+	<line x1="299" y1="362" x2="362" y2="368" stroke="#8a96a8" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+
+	<!-- ════════════ FELL-HIGHLIGHTS ════════════ -->
+	<ellipse cx="256" cy="175" rx="50" ry="30" fill="#b0c0d4" opacity="0.18"/>
+	<ellipse cx="158" cy="290" rx="35" ry="28" fill="#b0c0d4" opacity="0.12"/>
+	<ellipse cx="354" cy="290" rx="35" ry="28" fill="#b0c0d4" opacity="0.12"/>
+
+</svg>

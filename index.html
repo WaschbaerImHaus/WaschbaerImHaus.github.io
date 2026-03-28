@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--
+	@file index.html
+	@brief Startseite des GitHub-Profils von WaschbaerImHaus.
+	       Zeigt alle Projekte übersichtlich an.
+	@author Kurt Ingwer
+	@lastModified 2026-03-28
+-->
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="WaschbaerImHaus – GitHub-Projekte: SSH-Client, Text-Reader und KI-Mathematik">
+	<title>WaschbaerImHaus – Projekte</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+	<!-- ===== Header / Hero ===== -->
+	<header class="hero">
+		<div class="hero-inner">
+			<div class="avatar-wrap">
+				<img
+					src="https://github.com/WaschbaerImHaus.png"
+					alt="WaschbaerImHaus Avatar"
+					class="avatar"
+					width="120"
+					height="120"
+				>
+			</div>
+			<h1>WaschbaerImHaus</h1>
+			<p class="tagline">Open-Source-Projekte aus der Werkzeugkiste eines Entwicklers</p>
+			<div class="hero-links">
+				<a href="https://github.com/WaschbaerImHaus" target="_blank" rel="noopener" class="btn btn-primary">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+					GitHub-Profil
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<!-- ===== Projekte ===== -->
+	<main class="container">
+		<h2 class="section-title">Projekte</h2>
+
+		<div class="projects-grid">
+
+			<!-- ssh-easy -->
+			<article class="card" data-lang="Go">
+				<div class="card-header">
+					<span class="lang-badge go">Go</span>
+					<div class="card-icons">
+						<a href="https://github.com/WaschbaerImHaus/ssh-easy/releases" target="_blank" rel="noopener" title="Releases" class="icon-link">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+						</a>
+					</div>
+				</div>
+				<h3>ssh-easy</h3>
+				<p class="card-desc">SSH-Client mit automatischer Schlüsselerstellung beim ersten Verbindungsaufbau. Keine manuelle Schlüsselverwaltung mehr.</p>
+				<ul class="feature-list">
+					<li>Automatische Schlüsselgenerierung</li>
+					<li>Einfache Verbindungsverwaltung</li>
+					<li>Cross-Platform (Linux &amp; Windows)</li>
+				</ul>
+				<div class="card-footer">
+					<a href="https://github.com/WaschbaerImHaus/ssh-easy" target="_blank" rel="noopener" class="btn btn-secondary">Zum Projekt</a>
+					<a href="https://waschbaer.github.io/ssh-easy" target="_blank" rel="noopener" class="btn btn-ghost">Docs</a>
+				</div>
+			</article>
+
+			<!-- text-reader -->
+			<article class="card" data-lang="Go">
+				<div class="card-header">
+					<span class="lang-badge go">Go</span>
+					<div class="card-icons">
+						<a href="https://github.com/WaschbaerImHaus/text-reader/releases" target="_blank" rel="noopener" title="Releases" class="icon-link">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+						</a>
+					</div>
+				</div>
+				<h3>text-reader</h3>
+				<p class="card-desc">Schlichter Leser für .md, .txt, .epub und .tex Dateien. Fokussiert auf Lesbarkeit ohne überflüssige Abhängigkeiten.</p>
+				<ul class="feature-list">
+					<li>Unterstützt Markdown, Plaintext, ePub &amp; LaTeX</li>
+					<li>Minimalistisches Interface</li>
+					<li>Cross-Platform (Linux &amp; Windows)</li>
+				</ul>
+				<div class="card-footer">
+					<a href="https://github.com/WaschbaerImHaus/text-reader" target="_blank" rel="noopener" class="btn btn-secondary">Zum Projekt</a>
+					<a href="https://waschbaer.github.io/text-reader" target="_blank" rel="noopener" class="btn btn-ghost">Docs</a>
+				</div>
+			</article>
+
+			<!-- ai-generated-math-papers -->
+			<article class="card" data-lang="Python">
+				<div class="card-header">
+					<span class="lang-badge python">Python</span>
+					<div class="card-icons">
+						<a href="https://github.com/WaschbaerImHaus/ai-generated-math-papers/releases" target="_blank" rel="noopener" title="Releases" class="icon-link">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+						</a>
+					</div>
+				</div>
+				<h3>AI Generated Math Papers</h3>
+				<p class="card-desc">Showcase-Projekt: Wie gut löst aktuelle KI offene Mathematikprobleme? Ergebnisse aus Experimenten mit Claude Code (Opus 4.6).</p>
+				<ul class="feature-list">
+					<li>KI-generierte Lösungsversuche</li>
+					<li>Bewertung der KI-Qualität</li>
+					<li>Offene Mathematikprobleme</li>
+				</ul>
+				<div class="card-footer">
+					<a href="https://github.com/WaschbaerImHaus/ai-generated-math-papers" target="_blank" rel="noopener" class="btn btn-secondary">Zum Projekt</a>
+				</div>
+			</article>
+
+		</div>
+	</main>
+
+	<!-- ===== Footer ===== -->
+	<footer class="site-footer">
+		<p>
+			&copy; 2026 WaschbaerImHaus &mdash; MIT Lizenz &mdash;
+			<a href="https://github.com/WaschbaerImHaus" target="_blank" rel="noopener">GitHub</a>
+		</p>
+		<p class="build-info">Build 1</p>
+	</footer>
+</body>
+</html>

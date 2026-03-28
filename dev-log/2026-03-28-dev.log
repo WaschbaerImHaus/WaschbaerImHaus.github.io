@@ -1,0 +1,12 @@
+2026-03-28 13:20 – Projekt initialisiert
+  - Git-Remote eingerichtet: git@github.com:WaschbaerImHaus/WaschbaerImHaus.github.io.git
+  - Branch main ausgecheckt (initial commit mit LICENSE vorhanden)
+  - Projektstruktur nach CLAUDE.md angelegt (src/, docs/, tests/, debugging/, claude-generated/, research/, build/, dev-log/)
+  - index.html erstellt: Landing Page mit Projektkarten für ssh-easy, text-reader, ai-generated-math-papers
+  - style.css erstellt: dunkles GitHub-Design, responsive, Sprach-Badges
+  - favicon.svg erstellt (Waschbär-SVG)
+  - .gitignore erstellt
+  - src/build.txt: Build 1
+  - Dokumentationsdateien angelegt: README.md, BUGS.md, FEATURES.md, CHANGELOG.md, OPTIMIZE.md, MEMORY.md
+
+2026-03-28 13:25 – Erste Commits und Push nach GitHub

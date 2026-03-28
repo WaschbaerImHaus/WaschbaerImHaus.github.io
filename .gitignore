@@ -1,0 +1,20 @@
+# Betriebssystem
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build-Artefakte
+/build/
+
+# Laufzeit (nicht dev-log/)
+*.pid
+
+# Node (falls verwendet)
+node_modules/

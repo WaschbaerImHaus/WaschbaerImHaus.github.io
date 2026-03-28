@@ -1,0 +1,353 @@
+/*
+ * @file style.css
+ * @brief Stildefinitionen für die WaschbaerImHaus GitHub Page.
+ *        Modernes, dunkles Design mit Akzentfarben je Programmiersprache.
+ * @author Kurt Ingwer
+ * @lastModified 2026-03-28
+ */
+
+/* ===== CSS-Variablen ===== */
+:root {
+	/* Farben */
+	--bg-primary:    #0d1117;   /* GitHub-Dunkelhintergrund */
+	--bg-secondary:  #161b22;   /* Karten-Hintergrund */
+	--bg-hover:      #1c2128;   /* Hover-Zustand */
+	--border:        #30363d;   /* Rahmenfarbe */
+	--text-primary:  #e6edf3;   /* Haupttext */
+	--text-muted:    #7d8590;   /* Gedämpfter Text */
+	--accent-blue:   #58a6ff;   /* Link-Farbe */
+	--accent-green:  #3fb950;   /* Erfolg */
+
+	/* Sprach-Badges */
+	--go-color:      #00add8;
+	--python-color:  #3572a5;
+
+	/* Abstände */
+	--radius:        8px;
+	--radius-lg:     12px;
+
+	/* Typografie */
+	--font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+	--font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+/* ===== Reset & Basis ===== */
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+	font-family: var(--font-sans);
+	font-size: 16px;
+	line-height: 1.6;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	color: var(--accent-blue);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+ul {
+	list-style: none;
+}
+
+/* ===== Hilfklassen ===== */
+.container {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+/* ===== Buttons ===== */
+.btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.45rem 1rem;
+	border-radius: var(--radius);
+	font-size: 0.875rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background 0.15s, opacity 0.15s;
+	text-decoration: none;
+}
+
+.btn:hover {
+	text-decoration: none;
+	opacity: 0.85;
+}
+
+.btn-primary {
+	background: var(--accent-blue);
+	color: var(--bg-primary);
+}
+
+.btn-secondary {
+	background: var(--bg-primary);
+	color: var(--text-primary);
+	border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+	background: var(--bg-hover);
+}
+
+.btn-ghost {
+	background: transparent;
+	color: var(--text-muted);
+	border: 1px solid var(--border);
+}
+
+.btn-ghost:hover {
+	background: var(--bg-hover);
+	color: var(--text-primary);
+}
+
+/* ===== Hero / Header ===== */
+.hero {
+	background: linear-gradient(135deg, #161b22 0%, #0d1117 60%);
+	border-bottom: 1px solid var(--border);
+	padding: 4rem 1.5rem 3rem;
+	text-align: center;
+}
+
+.hero-inner {
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+.avatar-wrap {
+	margin-bottom: 1.25rem;
+}
+
+.avatar {
+	border-radius: 50%;
+	border: 3px solid var(--border);
+	margin: 0 auto;
+	transition: transform 0.3s;
+}
+
+.avatar:hover {
+	transform: scale(1.05);
+}
+
+.hero h1 {
+	font-size: clamp(1.75rem, 4vw, 2.75rem);
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	margin-bottom: 0.5rem;
+}
+
+.tagline {
+	color: var(--text-muted);
+	font-size: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.hero-links {
+	display: flex;
+	justify-content: center;
+	gap: 0.75rem;
+	flex-wrap: wrap;
+}
+
+/* ===== Hauptinhalt ===== */
+main {
+	flex: 1;
+	padding: 3rem 1.5rem;
+}
+
+.section-title {
+	font-size: 1.375rem;
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid var(--border);
+}
+
+/* ===== Projektraster ===== */
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 1.25rem;
+}
+
+/* ===== Karten ===== */
+.card {
+	background: var(--bg-secondary);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-lg);
+	padding: 1.25rem 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+	border-color: var(--accent-blue);
+	box-shadow: 0 0 0 1px rgba(88, 166, 255, 0.15);
+}
+
+.card-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card-icons {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.icon-link {
+	color: var(--text-muted);
+	display: flex;
+	align-items: center;
+	transition: color 0.15s;
+}
+
+.icon-link:hover {
+	color: var(--accent-blue);
+	text-decoration: none;
+}
+
+/* ===== Sprach-Badges ===== */
+.lang-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	padding: 0.2rem 0.6rem;
+	border-radius: 999px;
+}
+
+.lang-badge::before {
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+.lang-badge.go {
+	color: var(--go-color);
+	background: rgba(0, 173, 216, 0.1);
+}
+
+.lang-badge.go::before {
+	background: var(--go-color);
+}
+
+.lang-badge.python {
+	color: var(--python-color);
+	background: rgba(53, 114, 165, 0.15);
+}
+
+.lang-badge.python::before {
+	background: var(--python-color);
+}
+
+/* ===== Karten-Text ===== */
+.card h3 {
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+.card-desc {
+	color: var(--text-muted);
+	font-size: 0.9rem;
+	line-height: 1.55;
+}
+
+/* ===== Feature-Liste ===== */
+.feature-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+
+.feature-list li {
+	font-size: 0.85rem;
+	color: var(--text-muted);
+	padding-left: 1.2rem;
+	position: relative;
+}
+
+.feature-list li::before {
+	content: "▸";
+	position: absolute;
+	left: 0;
+	color: var(--accent-green);
+}
+
+/* ===== Karten-Footer ===== */
+.card-footer {
+	margin-top: auto;
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
+/* ===== Site-Footer ===== */
+.site-footer {
+	border-top: 1px solid var(--border);
+	padding: 1.5rem;
+	text-align: center;
+	font-size: 0.8rem;
+	color: var(--text-muted);
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+.site-footer a {
+	color: var(--text-muted);
+}
+
+.site-footer a:hover {
+	color: var(--accent-blue);
+}
+
+.build-info {
+	font-family: var(--font-mono);
+	font-size: 0.7rem;
+	opacity: 0.5;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+	.hero {
+		padding: 2.5rem 1rem 2rem;
+	}
+
+	.projects-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.card {
+		padding: 1rem;
+	}
+}

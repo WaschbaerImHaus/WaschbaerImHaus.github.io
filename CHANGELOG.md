@@ -2,6 +2,11 @@
 
 Alle wichtigen Änderungen werden in dieser Datei dokumentiert.
 
+## [1.0.1] – 2026-03-28
+
+### Hinzugefügt
+- `avatar.png` (512×512px) für GitHub-Profil-Upload exportiert
+
 ## [1.0.0] – 2026-03-28
 
 ### Hinzugefügt
